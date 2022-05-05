@@ -11,12 +11,15 @@
   * Implementing CRUD (create, read, update and delete) operations.
   * How to handle chatterbot module in python 
 
+### Research Papers
+- IJAEM (http://www.ijaem.net/current-issue.php?issueid=41)
+- IJCRT (https://ijcrt.org/viewfulltext.php?&p_id=IJCRT2111233) 
+
 ## Skills used for this project
 - Natural language processing tool kit
 - Pattern Matching
 - Python –flask
 - SQL alchemy
-
 
 #### PreRequisites
   * [Python ~3.7](https://www.python.org/)
