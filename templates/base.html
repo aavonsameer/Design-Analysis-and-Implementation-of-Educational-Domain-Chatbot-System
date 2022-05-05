@@ -1,0 +1,112 @@
+{% include "nav.html" %}
+{% include "chatbox.html" %}
+
+<html>
+    <head>
+        <title>{{session['usert']}}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <head>
+<style>
+form * {
+  display: block;
+  margin: 10px;
+}
+</style>
+<script language="Javascript" >
+function download(filename, text) {
+  var pom = document.createElement('a');
+  pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
+
+encodeURIComponent(text));
+  pom.setAttribute('download', filename);
+
+  pom.style.display = 'none';
+  document.body.appendChild(pom);
+
+  pom.click();
+
+  document.body.removeChild(pom);
+}
+</script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+background-color: #16a8c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("login.png");
+
+  min-height: 600px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text]{
+  width: 50%;
+  padding: 15px;
+  margin: 10px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]{
+  background-color: #ddd;
+  outline: none;
+}
+
+
+/* Set a style for the submit button */
+input[type=submit]{
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<center>
+<h2>Enter Data</h2>
+<div class="bg-img">
+
+<form onsubmit="download(this['name'].value, this['text'].value)">
+<center> <input type="text" name="name" value="Type filename with extension">
+  <textarea rows=25 cols=50 name="text">Type the Data to be entered....</textarea>
+  <input type="submit" value="Download File">
+</form>
+</div>
+</body>
+</html>
